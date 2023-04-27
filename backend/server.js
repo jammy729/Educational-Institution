@@ -15,6 +15,7 @@ mongoose.connect(
 
 app.get("/", async (req, res) => {
   const food = new FoodModel({ foodName: "Apple", daysSinceIAte: 3 });
+
   try {
     await food.save();
     res.send("inserted data");
