@@ -40,7 +40,7 @@ const Home: React.FC = () => {
   //   PAGINATION
   const [page, setPage] = useState<number>(1);
 
-  const handleChangePage = (e: React.ChangeEvent<unknown>, value: number) => {
+  const handleChangePage = (_e: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
   };
 

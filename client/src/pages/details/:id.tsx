@@ -4,8 +4,6 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Grid from "@mui/material/Grid"; // Grid version 1
 import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
-import { Link } from "react-router-dom";
 
 interface Institution {
   id: string;

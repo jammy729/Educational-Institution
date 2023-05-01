@@ -1,3 +1,6 @@
+const dotenv = require("dotenv").config();
+
+const PORT = process.env.port || 3001;
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -8,12 +11,10 @@ const InstitutionModel = require("./models/Institution.js");
 
 app.use(express.json());
 app.use(cors());
-mongoose.connect(
-  "mongodb+srv://jyoo3607:James%40990729@cluster0.poxm5sh.mongodb.net/institution?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-  }
-);
+mongoose.connect(process.env.DB_URL, {
+  useNewUrlParser: true,
+  useNewUrlParser: true,
+});
 
 app.post("/insert", async (req, res) => {
   const foodName = req.body.foodName;
@@ -91,6 +92,6 @@ app.get("/details/:id", async (req, res) => {
     });
 });
 
-app.listen(3001, () => {
+app.listen(PORT, () => {
   console.log("server is running on port 3001");
 });
