@@ -51,7 +51,7 @@ const Home: React.FC = () => {
     console.log(countryValue);
     axios
       .get(
-        `http://localhost:3001/read?page=${page}?countryName=${countryValue}`
+        `http://localhost:9001/institution/read?page=${page}?countryName=${countryValue}`
       )
       .then((response) => {
         console.log(response.data);

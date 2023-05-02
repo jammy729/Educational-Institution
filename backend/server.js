@@ -10,8 +10,8 @@ const InstitutionModel = require("./models/Institution.js");
 
 app.use(express.json());
 app.use(cors());
+
 mongoose.connect(process.env.MONGODB_URL, {
-  useNewUrlParser: true,
   useNewUrlParser: true,
 });
 
